@@ -1,0 +1,219 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    background: linear-gradient(to bottom,white, white); /* Soft gradient background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: white; /* Red for the main heading */
+    margin-top: 30px;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg,red, hsl(348, 19%, 100%));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Section headers styling */
+h2 {
+    color: #ff6b6b; /* Red for subheadings */
+    font-size: 1.75rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Form container */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff6b6b;
+}
+
+/* Form labels */
+label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus on input fields */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+}
+
+/* Button styles */
+button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #f72c2c;
+}
+
+/* Product list styling */
+#productList {
+    margin-top: 20px;
+}
+
+.product-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff6b6b;
+}
+
+.product-item label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Product name and quantity inputs */
+.product-name,
+.product-quantity {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Product suggestions dropdown */
+.product-suggestions {
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.product-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.product-suggestions div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Bill section styling */
+#billOutput {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    border-left: 5px solid #ff6b6b;
+    color: #333;
+}
+
+#billOutput b {
+    color: #ff6b6b;
+}
+
+/* Customer information styling */
+#billOutput .customer-name,
+#billOutput .phone-number {
+    font-weight: bold;
+    color: #4CAF50;  /* Green for name and phone number */
+}
+
+/* Product list information styling */
+#billOutput .product-item {
+    color: #3f51b5; /* Blue for product list */
+    font-weight: normal;
+}
+
+/* Total Bill and Final Amount sections */
+#billOutput .total {
+    font-weight: bold;
+    color: #ff5722; /* Orange for total */
+    font-size: 1.4rem;
+}
+
+/* Discount applied styling */
+#billOutput .discount {
+    font-weight: bold;
+    color: #9c27b0; /* Purple for discount */
+}
+
+/* Final Amount styling */
+#billOutput .final-amount {
+    font-weight: bold;
+    color: #f72c2c; /* Red for final amount */
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #billOutput {
+        font-size: 1rem;
+    }
+}
